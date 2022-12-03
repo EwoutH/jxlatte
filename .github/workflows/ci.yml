@@ -20,12 +20,7 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: '17'
-    - uses: BSFishy/meson-build@v1.0.3
-    - uses: seanmiddleditch/gha-setup-ninja@master
-    - run: mkdir build
-    - name: Meson setup
-      run: meson setup ../
-      working-directory: build
-    - name: Build with Ninja
-      run: ninja
-      working-directory: build
+    - uses: BSFishy/meson-build@master
+      with:
+        action: build
+        directory: build
