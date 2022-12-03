@@ -24,7 +24,7 @@ jobs:
     - run: mkdir build
     - name: Meson setup
       run: meson setup ../
-      working-directiroy: build
+      working-directory: build
     - name: Build with Ninja
       run: ninja
-      working-directiroy: build
+      working-directory: build
